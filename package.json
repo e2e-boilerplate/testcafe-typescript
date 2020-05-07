@@ -46,7 +46,7 @@
   "scripts": {
     "lint": "tslint -c tslint.json './spec/*.ts'",
     "pretty": "prettier --no-config './spec/*.ts' --write",
-    "test": "npx testcafe chrome spec/sandbox.spec.ts"
+    "test": "npx testcafe chrome ./spec/sandbox.spec.ts"
   },
   "version": "1.0.0"
 }
