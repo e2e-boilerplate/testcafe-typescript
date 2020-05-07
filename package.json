@@ -7,7 +7,7 @@
     "testcafe": "1.8.4",
     "typescript": "3.8.3"
   },
-  "description": "TestCafe end-to-end test automation boilerplate. Using TypeScript.",
+  "description": "TestCafé end-to-end test automation boilerplate. Using TypeScript.",
   "devDependencies": {
     "@types/node": "13.13.4",
     "husky": "4.2.5",
