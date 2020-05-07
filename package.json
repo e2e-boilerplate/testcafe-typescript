@@ -1,25 +1,23 @@
 {
   "author": "Girma Nigusse <xgirma@gmail.com>",
   "bugs": {
-    "url": "https://github.com/e2e-boilerplate/testcafe-es-modules/issues"
+    "url": "https://github.com/e2e-boilerplate/testcafe-typescript/issues"
   },
   "dependencies": {
-    "testcafe": "1.8.4"
+    "testcafe": "1.8.4",
+    "typescript": "3.8.3"
   },
-  "description": "TestCafe end-to-end test automation boilerplate. Using ES Modules.",
+  "description": "TestCafe end-to-end test automation boilerplate. Using TypeScript.",
   "devDependencies": {
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-config-prettier": "6.11.0",
-    "eslint-plugin-import": "2.20.2",
-    "eslint-plugin-prettier": "3.1.3",
-    "eslint-plugin-testcafe": "0.2.1",
+    "@types/node": "13.13.4",
     "husky": "4.2.5",
     "lint-staged": "10.2.2",
     "prettier": "2.0.4",
-    "pretty-quick": "2.0.1"
+    "tslint": "6.1.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.3.0"
   },
-  "homepage": "https://github.com/e2e-boilerplate/testcafe-es-modules#readme",
+  "homepage": "https://github.com/e2e-boilerplate/testcafe-typescript#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --allow-empty"
@@ -31,22 +29,24 @@
     "e2e tests",
     "example",
     "integration test",
-    "testcafe"
+    "testcafe",
+    "typescript"
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.{js,ts,json,md}": [
       "prettier --write"
     ]
   },
-  "name": "testcafe-es-modules",
+  "name": "testcafe-typescript",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/e2e-boilerplate/testcafe-es-modules.git"
+    "url": "git+https://github.com/e2e-boilerplate/testcafe-typescript.git"
   },
   "scripts": {
-    "lint": "npx eslint --ext .js ./ --fix",
-    "test": "npx testcafe chrome spec/sandbox.spec.js"
+    "lint": "tslint -c tslint.json './spec/*.ts'",
+    "pretty": "prettier --no-config './spec/*.ts' --write",
+    "test": "npx testcafe chrome spec/sandbox.spec.ts"
   },
   "version": "1.0.0"
 }
